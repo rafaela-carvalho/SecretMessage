@@ -1,0 +1,62 @@
+<!-- DEPLOYED = https://rcarv-secretmessage.vercel.app/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link from https://cdnjs.com/ materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <style>
+      body {
+        background-color: mistyrose;
+      }
+      .row {
+        margin-top: 25vh;           
+      }
+      .card-panel {
+        box-shadow: 10px 5px 5px rgb(163, 160, 160);
+      }
+      h1 {
+        margin-top: 0;
+        color: rgb(219, 171, 166); 
+      }
+    </style>
+
+    <title>Secret Message</title>
+  </head>
+
+  <body>
+    <!-- Styling w/ class names from cdnjs materialize -->
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div id="message-show" class="card-panel hide">
+          <!-- h1 empty: once the message is decoded, it shows inside of it -->
+          <h1></h1>
+          <div>
+            <a href="./index.html">Create Your Own Secret Message</a>
+          </div>
+        </div>    
+
+        <div id="message-form" class="card-panel">
+          <form>
+            <label>Enter The Secret Message</label>
+            <input  id="message-input" />
+            <button class="btn">Create</button>
+          </form>
+        </div>
+
+        <div id="link-form" class="card-panel hide">
+          <div>
+            Share
+            <input id="link-input"/> 
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <script src="index.js"></script>
+  </body>
+</html>
